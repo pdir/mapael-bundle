@@ -1,0 +1,37 @@
+{
+  "name": "pdir/mapael-bundle",
+  "type":"contao-bundle",
+  "description": "mapael bundle for Contao 4",
+  "authors": [
+    {
+      "name": "Webdesign für Dresden",
+      "homepage": "https://pdir.de",
+      "email" : "develop@pdir.de",
+      "role" : "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "contao/core-bundle": "^4.4"
+  },
+  "conflict": {
+    "contao/core": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pdir\\MapaelBundle\\": "src/"
+    },
+    "classmap": [
+      "src/Bundle/Resources/contao/"
+    ],
+    "exclude-from-classmap": [
+      "src/Bundle/Resources/contao/config/",
+      "src/Bundle/Resources/contao/dca/",
+      "src/Bundle/Resources/contao/languages/",
+      "src/Bundle/Resources/contao/templates/"
+    ]
+  },
+  "extra": {
+    "contao-manager-plugin": "Pdir\\MapaelBundle\\Plugin"
+  }
+}
