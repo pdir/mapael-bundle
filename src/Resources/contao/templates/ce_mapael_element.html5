@@ -1,0 +1,22 @@
+<style>
+    .mapcontainer {
+        <?php if($this->mapaelWidth): ?> width: <?= $this->mapaelWidth ?>px; <?php else: ?> width: 100%; <?php endif; ?>
+    }
+</style>
+
+<?php $GLOBALS['TL_BODY'][] = '
+<script type="text/javascript">
+    $(function () {
+        $(".mapcontainer").mapael({
+            map: {
+                name: "'.$this->mapaelName.'"
+            }
+        });
+    });
+</script>'; ?>
+
+<div class="mapcontainer">
+    <div class="map">
+
+    </div>
+</div>
