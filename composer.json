@@ -11,7 +11,7 @@
     }
   ],
   "require": {
-    "php": ">=7.0.0",
+    "php": "^5.6 || ^7.0",
     "contao/core-bundle": "^4.4"
   },
   "conflict": {
@@ -22,16 +22,16 @@
       "Pdir\\MapaelBundle\\": "src/"
     },
     "classmap": [
-      "src/Bundle/Resources/contao/"
+      "src/Resources/contao/"
     ],
     "exclude-from-classmap": [
-      "src/Bundle/Resources/contao/config/",
-      "src/Bundle/Resources/contao/dca/",
-      "src/Bundle/Resources/contao/languages/",
-      "src/Bundle/Resources/contao/templates/"
+      "src/Resources/contao/config/",
+      "src/Resources/contao/dca/",
+      "src/Resources/contao/languages/",
+      "src/Resources/contao/templates/"
     ]
   },
   "extra": {
-    "contao-manager-plugin": "Pdir\\MapaelBundle\\Plugin"
+    "contao-manager-plugin": "Pdir\\MapaelBundle\\ContaoManager\\Plugin"
   }
 }
